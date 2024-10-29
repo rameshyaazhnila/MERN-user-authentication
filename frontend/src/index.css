@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17.8px;
+}
+.filter {
+    position: relative;
+    background-color:rgb(18, 223, 18);
+    color: white;
+    
+    
+     
+}
+.blurs{
+    backdrop-filter: blur(10px);
+    position: absolute;
+    /* background-color: rgb(19, 130, 19); */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+.ani {
+    position: absolute;
+    top:-20px;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    color:greenyellow;
+    animation: ramesh 2s ease-out 1 forwards;
+
+}
+
+@keyframes ramesh {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        width: 70px;
+        height: 70px;
+        
+    }
+    80%{
+        opacity: 1;
+        width: 150px;
+        height: 150px;
+    }
+    100% {
+        transform: translate(120px, -300px);
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+}
