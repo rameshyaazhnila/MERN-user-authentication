@@ -27,8 +27,10 @@ const Forgot = () => {
 
         } catch (error) {
             setError(error.response.data);
-            setLoad(false)
+            setLoad(false);
             console.log(error);
+            console.log("hai");
+            
             
             
         }
