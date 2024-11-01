@@ -3,7 +3,9 @@ import axios from 'axios';
 import {create} from 'zustand'
 
 axios.defaults.withCredentials=true
-const API_USER="http://localhost:5501/user/"
+const API_USER = process.env.NODE_ENV === 'production' 
+    ? "http://localhost:5501/user/"
+    : "http://localhost:5501/user/";
 const userStore=create((set)=>({
     user:null,
     error:null,
