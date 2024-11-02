@@ -32,6 +32,11 @@ if(process.env.NODE_ENV=="production"){
     })
 
 }
+else{
+    app.get("/",(req,res)=>{
+        res.json(({msg:"server running successfully with developement"}))
+    })
+}
 app.listen(port,()=>{
     console.log("server is successfully connected");
     
