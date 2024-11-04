@@ -3,7 +3,7 @@ import axios from 'axios';
 import {create} from 'zustand'
 
 axios.defaults.withCredentials=true
-const API_USER ="https://mern-user-authentication.onrender.com";
+const API_USER ="https://mern-user-authentication.onrender.com/user";
 const userStore=create((set)=>({
     user:null,
     error:null,
