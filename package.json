@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "main": "backend/routes/index.js",
   "type": "module",
-  "engines": {
-    "node": "21.1.0"
-  },
   "scripts": {
     "dev":"node backend/routes/index.js",
     "start":"node backend/routes/index.js",

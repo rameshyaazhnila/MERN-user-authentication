@@ -6,10 +6,12 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import connectDB from '../library/database.js'
 import path from 'path'
+import dotenv from 'dotenv'
 
 
 
 const port=process.env.PORT || 5501
+dotenv.config()
 
 connectDB()
 const __dirname=path.resolve()
@@ -25,7 +27,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use('/user/',route)
 
-if(process.env.INDEXES==true || process.env.NODE_ENV=="production"){
+if(process.env.NODE_ENV=="developement"){
     app.use(express.static(path.join(__dirname,"frontend/dist")));
     app.get("*",(req,res)=>{
         res.sendFile(path.resolve(__dirname,"frontend","dist","index.html"))
@@ -33,9 +35,9 @@ if(process.env.INDEXES==true || process.env.NODE_ENV=="production"){
 
 }
 else{
-    app.use(express.static(path.join(__dirname,"frontend/dist")));
-    app.get("*",(req,res)=>{
-        res.sendFile(path.resolve(__dirname,"frontend","dist","index.html"))
+    // app.use(express.static(path.join(__dirname,"frontend/dist")));
+    app.get("/",(req,res)=>{
+        res.json(({msg:"server running successfully with developement"}))
     })
 }
 app.listen(port,()=>{

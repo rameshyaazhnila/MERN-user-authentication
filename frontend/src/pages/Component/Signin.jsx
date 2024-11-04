@@ -48,9 +48,9 @@ const Signin = () => {
     
 
   return (
-    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen grid place-content-center'>
+    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen flex flex-col items-center justify-center'>
         <h1 className='text-2xl m-5 font-medium'>Employee management system</h1>
-        <motion.div initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} transition={{duration:0.5}} className='w-[400px] p-5 rounded-xl filter hover:shadow-[0_40px_60px_rgba(0,0,0,0.50)]'>
+        <motion.div initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} transition={{duration:0.5}} className='w-[300px] sm:w-[400px] p-5 rounded-xl filter hover:shadow-[0_40px_60px_rgba(0,0,0,0.50)]'>
         <div className='blurs'></div>
         <h1 className='text-2xl font-bold'>Sign in</h1>
         <form onSubmit={handleSubmitLogin}>

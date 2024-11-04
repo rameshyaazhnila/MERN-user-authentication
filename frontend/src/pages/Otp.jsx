@@ -30,8 +30,8 @@ const Otp_verification = () => {
   
 
   return (
-    <div className="bg-gradient-to-b from-green-600 to-slate-300 via-green-600 h-screen grid place-content-center">
-      <div className="bg-white w-[400px] p-5 rounded-xl filter">
+    <div className="bg-gradient-to-b from-green-600 to-slate-300 via-green-600 h-screen flex flex-col items-center justify-center">
+      <div className="bg-white w-[320px] sm:w-[400px] p-5 rounded-xl filter">
         <h1 className="text-2xl font-bold text-center p-2">OTP sent to your email</h1>
         <form className="flex flex-col items-center" onSubmit={SubmitOTP}>
           <label htmlFor="otp" className="text-xl">Verify OTP</label>

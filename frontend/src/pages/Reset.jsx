@@ -39,9 +39,9 @@ const Reset = () => {
 
     
   return (
-    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen grid place-content-center'>
+    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen flex flex-col items-center justify-center'>
       <h1 className='text-2xl m-5 font-medium'>employee management system</h1>
-      <div className='w-[400px] p-5 rounded-xl filter'>
+      <div className='w-[320px] sm:w-[400px] p-5 rounded-xl filter'>
         <div className='blurs'></div>
         <h1 className='text-2xl font-bold'>Create Account</h1>
         <form onSubmit={handleSubmit}>

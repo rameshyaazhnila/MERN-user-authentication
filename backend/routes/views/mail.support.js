@@ -20,7 +20,7 @@ export async function sendPasswordResetLink(name,email,token){
         const __dirname=path.dirname(__filename)
         const sibling=path.join(__dirname,"../views/gmail.ejs")
         console.log(sibling);
-        const clientURL = process.env.NODE_ENV == "production" ? `${process.env.CLIENT_URL}/resetpassword` : "http://localhost:5173/resetpassword";
+        const clientURL = process.env.CLIENT_URL;
 
         const renderedFile=await ejs.renderFile(sibling,{name,token,clientURL})
     

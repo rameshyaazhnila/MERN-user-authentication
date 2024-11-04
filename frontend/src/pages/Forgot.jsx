@@ -21,7 +21,7 @@ const Forgot = () => {
             setError("")
             setMsg("")
             setLoad(true)
-            const responsed=await axios.post("http://localhost:5501/user/forgot/",{email},{withCredentials: true})
+            const responsed=await axios.post("https://mern-user-authentication.onrender.com/user/forgot/",{email},{withCredentials: true})
             setMsg(responsed.data.msg);
             setLoad(false)
 
@@ -37,8 +37,8 @@ const Forgot = () => {
         
     }
   return (
-    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen grid place-content-center'>
-        <div className='bg-white w-[400px] p-6 rounded-xl filter hover:shadow-[0_40px_60px_rgba(0,0,0,0.50)]'>
+    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen flex flex-col items-center justify-center'>
+        <div className='bg-white w-[320px] sm:w-[400px] p-6 rounded-xl filter hover:shadow-[0_40px_60px_rgba(0,0,0,0.50)]'>
         <div className='blurs'></div>
         
             <h1 className='text-2xl font-bold'>Reset password via Mail</h1>

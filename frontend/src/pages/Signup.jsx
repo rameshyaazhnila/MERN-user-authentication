@@ -71,9 +71,9 @@ const Signup = () => {
       
   
   return (
-    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen grid place-content-center'>
+    <div className='bg-gradient-to-b from-green-600 from-50% to-slate-300 to-50% via-green-600 h-screen flex flex-col items-center justify-center'>
       <h1 className='text-2xl m-5 font-medium'>employee management system</h1>
-      <motion.div initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} transition={{duration:0.6}} className='max-w-[400px] overflow-hidden rounded-xl p-5 filter hover:shadow-[0_30px_60px_rgba(0,7,0,0.70)]'>
+      <motion.div initial={{opacity:0,y:40}} animate={{opacity:1,y:0}} transition={{duration:0.6}} className='m-w-[330px] sm:w-[400px] overflow-hidden rounded-xl p-5 filter hover:shadow-[0_30px_60px_rgba(0,7,0,0.70)]'>
         <div className='blurs'></div>
         <h1 className='text-2xl font-bold mb-1'>Create Account</h1>
         <form onSubmit={handleSubmit} className='relative'>
